@@ -832,7 +832,7 @@ body.index::before {
     content: "";
     background: url(../images/partners/bg.png);
     width: 100%;
-    height: 17%;
+    height: 19%;
     background-size: cover;
 }
 
@@ -1146,7 +1146,8 @@ ul.listing li a:hover {
 
 .iq-screenshot {
     margin-top: 200px;
-    background: url(../images/screenshots/bg.png) no-repeat center center
+    background: url(../images/screenshots/bg.png) no-repeat center center;
+    background-size: cover;
 }
 
 #iq-screenshot-carousel {
@@ -1907,7 +1908,7 @@ footer .logo {
     color: #fff
 }
 
-.iq-login-regi .iq-media li i {}
+/* .iq-login-regi .iq-media li i {} */
 
 .iq-login-regi .iq-media li a.fb {
     background: #3d5f9a
@@ -2039,7 +2040,7 @@ footer .logo {
     color: #fff
 }
 
-.iq-login-regi .iq-media li i {}
+/* .iq-login-regi .iq-media li i {} */
 
 .iq-login-regi .iq-media li a.fb {
     background: #3d5f9a
@@ -2196,20 +2197,20 @@ footer .logo {
 }
 
 .iq-coming form::-webkit-input-placeholder {
-    /Chrome/color: #ffffff
+    color: #ffffff
 }
 
 .iq-coming form:-ms-input-placeholder {
-    /IE10+/color: #ffffff
+    color: #ffffff
 }
 
 .iq-coming form::-moz-placeholder {
-    /Firefox19+/color: #ffffff;
+    color: #ffffff;
     opacity: 1
 }
 
 .iq-coming form:-moz-placeholder {
-    /Firefox4-18/color: #ffffff;
+    color: #ffffff;
     opacity: 1
 }
 

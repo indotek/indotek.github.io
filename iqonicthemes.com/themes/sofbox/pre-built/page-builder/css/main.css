@@ -4,6 +4,16 @@
 .iq-feature {
     padding-top:125px !important;
 }
+@media (max-width: 767px) {
+    .iq-feature {
+        padding-top: 50px !important;
+    }
+}
 #clients {
     padding-top: 190px !important;
+}
+@media (max-width: 767px) {
+    #clients {
+        padding-top: 50px !important;
+    }    
 }
