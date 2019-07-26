@@ -74,7 +74,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html#contactus">Contact Us</a>
-                                </li>                               
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -96,14 +96,6 @@
                         <h3 class="text-white">Career </h3>
                     </div>
                 </div>
-                <!-- <div class="col-lg-6 col-md-6">
-                    <nav aria-label="breadcrumb" class="float-right">
-                        <ol class="breadcrumb title">
-                            <li class="breadcrumb-item"><a href="index.html" class="">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Career</li>
-                        </ol>
-                    </nav>
-                </div> -->
             </div>
         </div>
     </div>
@@ -151,25 +143,8 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="text-center">
-                                    <a href="#" class="button">Apply Job</a>
+                                    <a href=".form-apply"  class="button" data-toggle="modal" data-target=".form-apply">Apply Job</a>
                                 </div>
-                                <form action="https://hooks.zapier.com/hooks/catch/5414821/oogw54l/" enctype="multipart/form-data" method="post">
-                                    Nama:<br>
-                                    <input type="text" name="name">
-                                    <br>
-                                    Nomor Telfon:<br>
-                                    <input type="text" name="position">
-                                    <br>
-                                    Email:<br>
-                                    <input type="email" name="email">
-                                    <br>
-                                    upload cv:
-                                    <br>
-                                    <input type="file" name="file">
-                                    <br>
-                                    <br>
-                                    <input type="submit" value="Submit">
-                                  </form>
                             </div>
                         </div>
                     </div>
@@ -220,7 +195,7 @@
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4">
                                     <div class="text-center">
-                                        <a href="#" class="button">Apply Job</a>
+                                        <a href=".form-apply"  class="button" data-toggle="modal" data-target=".form-apply">Apply Job</a>
                                     </div>                                  
                                 </div>
                             </div>
@@ -304,6 +279,42 @@
                 <div class="py-3 text-center">
                     <button type="button" class="button subscription-button" data-dismiss="modal">Close</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Apply -->
+    <div class="modal fade form-apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content py-3 px-5" style="background-color: #f4f4f4">
+                <h4 class="text-center py-4">
+                    Form Apply
+                </h4>
+                <form action="https://hooks.zapier.com/hooks/catch/5414821/oogw54l/" enctype="multipart/form-data" method="post">
+                    <div class="modal-form">
+                        <label for="fullname">Fullname :</label>
+                        <input type="text" name="name" placeholder="Fullname" required>
+                    </div>
+                    <div class="modal-form">
+                        <label for="phoneNmber">Phone Number :</label>
+                        <input type="number" name="position" placeholder="0812345678901" required>
+                    </div>
+                    <div class="modal-form">
+                        <label for="email">Email :</label>
+                        <input type="email" name="email" placeholder="example@info.com" required>
+                    </div>
+                    <div class="modal-form">
+                        <label for="CV">Link Portofolio :</label>
+                        <input type="text" name="portofolio" placeholder="www.example.com">
+                    </div>
+                    <div class="modal-form">
+                        <label for="CV">Upload CV :</label>
+                        <input type="file" class="form-upload" name="uploadCV" required>
+                    </div>
+                    <div class="modal-form">
+                        <input type="submit" value="Submit" class="button">
+                    </div>
+                </form>
             </div>
         </div>
     </div>

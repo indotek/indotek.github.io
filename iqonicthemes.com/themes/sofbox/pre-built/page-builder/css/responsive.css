@@ -61,12 +61,12 @@
     footer .iq-subscribe{margin-bottom:50px}
     footer{padding:50px 0}
     header,header.menu-sticky{padding:10px 0}
-    header .login{bottom:3px;position:absolute;right:85px}
-    header .navbar-light .navbar-collapse{position:absolute;top:60px;width:100%;background:#fff}
+    header .login{bottom:-2px;position:absolute;right:20px}
+    header .navbar-light .navbar-collapse{position:absolute;top:49px;width:100%;background:#fff}
     header .navbar-light .navbar-toggler{border:2px solid #fff;background:#fff}
-    header.menu-sticky .login{bottom:4px}
+    header.menu-sticky .login{bottom:-2px}
     header .navbar .navbar-nav .nav-item a,header.menu-sticky .navbar .navbar-nav .nav-item a{padding:0}
-    header.menu-sticky .navbar-light .navbar-collapse{top:60px}
+    header.menu-sticky .navbar-light .navbar-collapse{top:49px}
     header .navbar-light .navbar-nav .nav-item{margin:0 20px 10px}
     header .navbar-light .navbar-nav{background:#fff;padding:10px 0;border:1px solid #ddd}
     header .navbar-light .navbar-nav .dropdown-menu{border:none;padding:10px}

@@ -31,3 +31,32 @@
 .fa-check-circle.fa-4x:before {
     color: #00c200;
 }
+
+.form-upload {
+    border: none;
+}
+.form-upload:hover {
+    border: none;
+}
+
+@media (max-width:767px) {
+    header .navbar .navbar-brand {
+        display: none;
+    }
+}
+header .navbar .navbar-nav>li:last-child {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    header .navbar .navbar-nav>li:last-child {
+        display: block;
+    }
+    header .navbar-light .navbar-toggler {
+        background: transparent;
+        border: none;
+    }
+    .navbar-light .navbar-toggler-icon {
+        filter: invert(10);
+    }
+}
