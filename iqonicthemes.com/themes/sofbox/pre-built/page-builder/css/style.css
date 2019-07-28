@@ -823,7 +823,8 @@ header.dark.menu-sticky {
 }
 
 body.index {
-    position: relative
+    position: relative;
+    overflow-x: hidden;
 }
 
 body.index::before {
