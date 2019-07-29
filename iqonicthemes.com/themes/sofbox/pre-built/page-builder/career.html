@@ -283,36 +283,54 @@
         </div>
     </div>
 
+    <div class="modal fade" id="submit-success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content py-3">
+                <div class="modal-body text-center">
+                    <i class="fas fa-check-circle fa-4x"></i>
+                    <p class="mt-3">We will process your application</p>
+                </div>
+                <div class="py-3 text-center">
+                    <button type="button" class="button subscription-button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Form Apply -->
-    <div class="modal fade form-apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="ihiy" class="modal fade form-apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content py-3 px-5" style="background-color: #f4f4f4">
                 <h4 class="text-center py-4">
                     Form Apply
                 </h4>
-                <form action="https://hooks.zapier.com/hooks/catch/5414821/oogw54l/" enctype="multipart/form-data" method="post">
+                <form id="formapply" enctype="multipart/form-data" method="post">
                     <div class="modal-form">
-                        <label for="fullname">Fullname :</label>
+                        <label for="fullname"><sup class="text-danger">*</sup>Fullname :</label>
                         <input type="text" name="name" placeholder="Fullname" required>
                     </div>
                     <div class="modal-form">
-                        <label for="phoneNmber">Phone Number :</label>
-                        <input type="number" name="position" placeholder="0812345678901" required>
+                        <label for="phoneNmber"><sup class="text-danger">*</sup>Phone Number :</label>
+                        <input type="number" name="phone" placeholder="0812345678901" required>
                     </div>
                     <div class="modal-form">
-                        <label for="email">Email :</label>
+                        <label for="email"><sup class="text-danger">*</sup>Email :</label>
                         <input type="email" name="email" placeholder="example@info.com" required>
                     </div>
                     <div class="modal-form">
-                        <label for="CV">Link Portofolio :</label>
-                        <input type="text" name="portofolio" placeholder="www.example.com">
+                        <label for="CV"><sup class="text-danger">*</sup>Position to Apply :</label>
+                        <input type="text" name="position" placeholder="e.g : Fullstack" required>
                     </div>
                     <div class="modal-form">
-                        <label for="CV">Upload CV :</label>
-                        <input type="file" class="form-upload" name="uploadCV" required>
+                        <label for="CV">Portfolio Link :</label>
+                        <input type="text" name="link" placeholder="www.example.com">
                     </div>
                     <div class="modal-form">
-                        <input type="submit" value="Submit" class="button">
+                        <label for="CV"><sup class="text-danger">*</sup>Upload Your CV :</label>
+                        <input type="file" class="form-upload p-0" name="uploadcv" required>
+                    </div>
+                    <div class="modal-form">
+                        <input id="apply-button" type="submit" value="Submit" class="button">
                     </div>
                 </form>
             </div>
@@ -342,6 +360,47 @@
     <script src="js/retina.min.js"></script>
 
     <script src="js/custom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+    <script>
+        $('#formapply').validate({
+            rules: {
+                name: "required",
+                number: "required",
+                uploadcv: "required",
+                position: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            submitHandler: function(){
+                jQuery.ajax({
+                    url: 'https://hooks.zapier.com/hooks/catch/5414821/oogw54l',
+                    data: new FormData($('#formapply')[0]),
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    method: 'POST',
+                    success: function(data){
+                        if (data.status === 'success') {
+                            $("#submit-success").modal()
+                            $("#ihiy").modal("hide")
+                        }
+                    }
+                });
+            },
+            focusCleanup: true,
+            errorClass: "text-danger d-block mt-3-min",
+            validClass: "border-success"
+        });
+    </script>
+    <style>
+    label.mt-3-min{
+        margin-top: -30px;
+    }
+    </style>
 </body>
 
 <!-- Mirrored from iqonicthemes.com/themes/sofbox/pre-built/page-builder/feature.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jul 2019 03:42:21 GMT -->
