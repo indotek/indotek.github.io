@@ -44,9 +44,6 @@
         display: none;
     }
 }
-header .navbar .navbar-nav>li:last-child {
-    display: none;
-}
 
 @media (max-width: 767px) {
     header .navbar .navbar-nav>li:last-child {
